@@ -1,0 +1,16 @@
+.creatorBtn{
+    width: 60%;
+    @include btnInptReset;
+    background: $tertiaryColor;
+    color: white;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+    padding: 0.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    &:hover{
+        background: $primaryBg;
+        color: $tertiaryColor;
+    }
+    
+}

@@ -1,0 +1,15 @@
+.wrapper{
+    display: grid;
+    grid-template-rows: 1fr 8fr;
+    height: 100vh;
+    background-color: $primaryBg;
+}
+
+.appBody{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.ideaCreator{
+    @include gridAligmentCenter;
+}

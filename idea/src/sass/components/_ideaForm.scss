@@ -1,0 +1,55 @@
+.ideaForm{
+    background:linear-gradient( 45deg, #57233a, #ae4951);
+    color: $primaryBg;
+    width: 80%;
+    @include gridAligmentCenter;
+    @include borderRadius;
+    @include Shadow;
+}
+
+.ideaForm h1{
+    text-transform: uppercase;
+    color: $tertiaryColor;
+    font-weight: lighter;
+    letter-spacing: 0.1rem;
+}
+
+.innerForm{
+    @include gridAligmentCenter;
+    width: 100%;
+}
+
+
+.formFiled{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+    width: 80%;
+    border-bottom: 0.1rem solid white;
+    padding-bottom: 0.5rem;
+}
+
+.formFiled label{
+    text-transform: capitalize;
+    letter-spacing: 0.2rem;
+    font-size: 2.5em;
+}
+
+.formFiledInpt{
+    max-width: 8rem;
+    width: 8rem;
+}
+
+.submitBtnWrapp{
+    width: 100%;
+    @include flexAligmentCenter;
+    margin: 0.5rem 0;
+}
+
+small{
+    display: block;
+    color:white;
+    text-align: center;
+    font-size: 1.2rem;
+}

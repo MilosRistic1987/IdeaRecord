@@ -1,0 +1,25 @@
+@mixin flexAligmentCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin gridAligmentCenter{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+@mixin borderRadius {
+    border-radius: 0.8rem;
+}
+
+@mixin Shadow{
+    box-shadow: 0.15rem 0.15rem 0.2rem black;
+}
+
+@mixin btnInptReset{
+    border: none;
+    outline: none;
+    border-radius: 0.2rem;
+}
