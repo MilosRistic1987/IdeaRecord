@@ -1,0 +1,125 @@
+.ideaFiled {
+    display              : grid;
+    grid-template-columns: 1fr 0.3fr 1.8fr 0.3fr 1fr 1fr;
+    width                : 95%;
+    background           : linear-gradient(45deg, #ae4951, #57233a);
+    border-radius        : 0.2rem;
+    @include Shadow;
+    margin: 0.5rem 0;
+}
+
+.goldenFiled {
+    display              : grid;
+    grid-template-columns: 1fr 0.3fr 1.8fr 0.3fr 1fr 1fr;
+    width                : 95%;
+    background           : linear-gradient(45deg, $goldMetalLight, $goldMetalDark);
+    border-radius        : 0.2rem;
+    @include Shadow;
+    margin: 0.5rem 0;
+
+    .dateTimeWraper {
+        & h3 {
+            color           : black;
+            background-color: #c5a12c;
+            border-left     : 0.02rem solid #f3c93f;
+            border-bottom   : 0.02rem solid #f3c93f;
+            border-top      : 0.02rem solid #f3c93f;
+        }
+    }
+
+    .ideaHeading {
+        & h1 {
+            color      : $primaryBg;
+            text-shadow: 0.1rem 0.1rem 0 #d3ad2f;
+        }
+
+        & p {
+            font-size     : 1.3em;
+            color         : white;
+            text-transform: capitalize;
+        }
+    }
+
+    .ratingIcon {
+        color : $goldMetalLight;
+        filter: drop-shadow(0.09rem 0.09rem 0.09rem $primaryBg);
+    }
+
+    .orderNumberWrapp {
+        background: linear-gradient(to top, #be9c2a, #c5a12b);
+        color     : $primaryBg;
+    }
+}
+
+.orderNumberWrapp {
+    background-color: white;
+    color           : $primaryBg;
+    text-align      : center;
+    @include flexAligmentCenter;
+    clip-path: polygon(50% 0, 100% 0, 50% 100%, 0 100%);
+}
+
+.dateTimeWraper {
+    @include gridAligmentCenter;
+    grid-template-rows: 1fr 1fr;
+
+    & h3 {
+        color           : white;
+        font-size       : 1rem;
+        letter-spacing  : 0.1rem;
+        background-color: #57233a1e;
+        padding         : 0.8rem;
+        border-radius   : 0.2rem;
+        border-left     : 0.02rem solid #b84b54;
+        border-bottom   : 0.02rem solid #b84b54;
+        border-top      : 0.02rem solid #b84b54;
+    }
+
+}
+
+.ideaFiledBtnsWrapp {
+    @include gridAligmentCenter;
+}
+
+.ratingWrapp {
+    @include gridAligmentCenter;
+    text-align : center;
+    padding-top: 0.5rem;
+    color      : white;
+}
+
+.ratingIcon {
+    color    : $tertiaryColor;
+    font-size: 2.5em;
+}
+
+.ideaHeading {
+    @include gridAligmentCenter;
+    letter-spacing: 0.2rem;
+    font-weight   : lighter;
+    text-align    : center;
+
+    & h1 {
+        font-size     : 2.5em;
+        color         : $primaryBg;
+        text-transform: uppercase;
+        text-shadow   : 0.1rem 0.1rem 0 rgb(146, 61, 80);
+    }
+
+    & p {
+        font-size     : 1.3em;
+        color         : white;
+        text-transform: capitalize;
+    }
+}
+
+.categoryWrapp {
+    color: white;
+    @include flexAligmentCenter;
+
+    & h1 {
+        letter-spacing: 0.2rem;
+        font-weight   : lighter;
+        text-transform: capitalize;
+    }
+}

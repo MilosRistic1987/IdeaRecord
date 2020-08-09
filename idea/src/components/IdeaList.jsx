@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import IdeaFiled from '../components/IdeaFiled'
 
-const IdeaList = () => {
+const IdeaList = ({formData, setFormdata, setCreatorFormData}) => {
+    
     return (
-        <div>
-            
+        <div className='ideaList'>
+            {formData.map(el=><IdeaFiled formData={el} key={el.key} setFormdata={setFormdata} setCreatorFormData={setCreatorFormData}/>)}       
         </div>
     )
 }

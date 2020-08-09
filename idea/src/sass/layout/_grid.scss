@@ -8,8 +8,10 @@
 .appBody{
     display: grid;
     grid-template-columns: 1fr 2fr;
+    @include gridAligmentCenter;
 }
 
 .ideaCreator{
     @include gridAligmentCenter;
+    width: 90%;
 }

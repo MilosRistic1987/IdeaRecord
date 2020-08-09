@@ -1,0 +1,124 @@
+.categoryModal {
+    position  : fixed;
+    left      : 0;
+    top       : 0;
+    width     : 100%;
+    height    : 100%;
+    background: radial-gradient(#943f46, #ae4951);
+    z-index   : 2;
+}
+
+.modalCard {
+    width     : 50%;
+    height    : 60%;
+    background: $primaryBg;
+    @include Shadow;
+    @include borderRadius;
+    display           : grid;
+    grid-template-rows: 1fr auto 4fr 1fr;
+}
+
+.displayNone {
+    @extend .categoryModal;
+    display: none;
+}
+
+
+.displayFlex {
+    @extend .categoryModal;
+    @include flexAligmentCenter;
+}
+
+.modalCardFooter {
+    @include flexAligmentCenter;
+}
+
+.modalCardHeader {
+    position: relative;
+    @include flexAligmentCenter;
+
+    & h1 {
+        color         : $tertiaryColor;
+        letter-spacing: 0.2rem;
+        font-weight   : lighter;
+        font-size     : 2rem;
+    }
+}
+
+.modalCardBody {
+    max-height: 20rem;
+    @include Srcoll;
+}
+
+.addModalIcon {
+    position : absolute;
+    right    : 0;
+    top      : 0;
+    color    : $tertiaryColor;
+    font-size: 2.5rem;
+    margin   : 1rem 1rem 0 0;
+    cursor   : pointer;
+}
+
+.modalFiled {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    color          : $tertiaryColor;
+    padding        : 0 2rem;
+    font-size      : 2rem;
+
+    & h1 {
+        letter-spacing: 0.2rem;
+        font-weight   : lighter;
+        font-size     : 2rem;
+        text-transform: capitalize;
+    }
+
+    .modalCardEditIcon {
+        cursor      : pointer;
+        margin-right: 1rem;
+    }
+}
+
+.modalInputWrappOpen {
+    & form {
+        display        : flex;
+        align-items    : center;
+        justify-content: space-between;
+        padding        : 0 2rem;
+    }
+
+    & form input {
+        background: #21282ed8;
+        @include btnInptReset;
+        padding   : 0.5rem 0 0.5rem 1rem;
+        color     : $tertiaryColor;
+        width     : 10rem;
+        transition: all 1s ease-in-out;
+
+        &:focus {
+            width        : 15rem;
+            border-bottom: 0.1rem solid $primaryColor;
+        }
+    }
+
+    & button {
+        background-color: $tertiaryColor;
+        @include btnInptReset;
+        border-radius : 0.2rem;
+        padding       : 0.5rem;
+        text-transform: uppercase;
+        transition    : all 1s ease-in-out;
+        cursor        : pointer;
+
+        &:hover {
+            background-color: $primaryColor;
+            color           : $tertiaryColor;
+        }
+    }
+}
+
+.modalInputWrappClose {
+    display: none;
+}

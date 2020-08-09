@@ -18,8 +18,22 @@
     box-shadow: 0.15rem 0.15rem 0.2rem black;
 }
 
+@mixin bgGradient{
+    background:linear-gradient( 45deg, #57233a, #ae4951);
+}
+
 @mixin btnInptReset{
     border: none;
     outline: none;
     border-radius: 0.2rem;
+}
+
+@mixin Srcoll {
+    overflow-y: scroll;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+    &::-webkit-scrollbar { /* WebKit */
+        width: 0;
+        height: 0;
+    }
 }

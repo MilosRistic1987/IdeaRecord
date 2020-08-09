@@ -1,0 +1,8 @@
+.ideaList {
+    background: $tertiaryColor;
+    max-height: 80vh;
+    @include Srcoll;
+    @include borderRadius;
+    width: 90%;
+    @include gridAligmentCenter;
+}

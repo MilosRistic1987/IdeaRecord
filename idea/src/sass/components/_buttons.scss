@@ -1,16 +1,87 @@
-.creatorBtn{
-    width: 60%;
-    @include btnInptReset;
+.creatorBtn {
+  width: 60%;
+  @include btnInptReset;
+  background    : $tertiaryColor;
+  color         : white;
+  cursor        : pointer;
+  transition    : all 1s ease-in-out;
+  padding       : 0.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+
+  &:hover {
+    background: $primaryBg;
+    color     : $tertiaryColor;
+  }
+}
+
+.ideaFiledBtns {
+  @include btnInptReset;
+  cursor          : pointer;
+  transition      : all 1s ease-in-out;
+  padding         : 0.2rem;
+  margin          : 0 0.5rem;
+  width           : 3rem;
+  background-color: $primaryBg;
+  color           : white;
+
+  &:hover {
+    background: white;
+    color     : $primaryBg;
+  }
+}
+
+
+.slider {
+  padding           : none;
+  -webkit-appearance: none;
+  appearance        : none;
+  width             : 100%;
+  height            : 0.6rem;
+  background        : $tertiaryColor;
+  outline           : none;
+  opacity           : 0.8;
+  -webkit-transition: .2s;
+  transition        : opacity .2s;
+  border-radius     : 0.2rem;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance        : none;
+    border-radius     : 50%;
+    width             : 1.3rem;
+    height            : 1.3rem;
+    background        : $primaryColor;
+    cursor            : pointer;
+  }
+
+  &::-moz-range-thumb {
+    width        : 1.3rem;
+    height       : 1.3rem;
+    background   : $primaryColor;
+    cursor       : pointer;
+    border-radius: 50%;
+  }
+}
+
+.closeModalBtn {
+  background: $primaryColor;
+  color     : $tertiaryColor;
+  @include btnInptReset;
+  cursor        : pointer;
+  text-transform: uppercase;
+  font-weight   : lighter;
+  padding       : 0.4rem;
+  width         : 30%;
+  letter-spacing: 0.1rem;
+  transition    : all 1s ease-in-out;
+
+  &:hover {
     background: $tertiaryColor;
-    color: white;
-    cursor: pointer;
-    transition: all 1s ease-in-out;
-    padding: 0.2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    &:hover{
-        background: $primaryBg;
-        color: $tertiaryColor;
-    }
-    
+    color     : $primaryColor;
+  }
 }

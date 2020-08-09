@@ -1,55 +1,70 @@
-.ideaForm{
-    background:linear-gradient( 45deg, #57233a, #ae4951);
+.ideaForm {
+    @include bgGradient;
     color: $primaryBg;
-    width: 80%;
+    width: 100%;
     @include gridAligmentCenter;
     @include borderRadius;
     @include Shadow;
 }
 
-.ideaForm h1{
+.ideaForm h1 {
     text-transform: uppercase;
-    color: $tertiaryColor;
-    font-weight: lighter;
+    color         : $tertiaryColor;
+    font-weight   : lighter;
     letter-spacing: 0.1rem;
 }
 
-.innerForm{
+.innerForm {
     @include gridAligmentCenter;
     width: 100%;
 }
 
 
-.formFiled{
-    display: flex;
-    align-items: center;
+.formFiled {
+    display        : flex;
+    align-items    : center;
     justify-content: space-between;
-    margin: 1rem 0;
-    width: 80%;
-    border-bottom: 0.1rem solid white;
-    padding-bottom: 0.5rem;
+    margin         : 1rem 0;
+    width          : 90%;
+    border-bottom  : 0.05rem solid white;
+    padding-bottom : 0.5rem;
 }
 
-.formFiled label{
+.formFiled label {
     text-transform: capitalize;
     letter-spacing: 0.2rem;
-    font-size: 2.5em;
+    font-size     : 2.5em;
 }
 
-.formFiledInpt{
+.formFiledInpt {
     max-width: 8rem;
-    width: 8rem;
+    width    : 8rem;
+    @include btnInptReset;
+    background: #ae4951be;
+    color     : white;
+    padding   : 0.4rem;
 }
 
-.submitBtnWrapp{
+.submitBtnWrapp {
     width: 100%;
     @include flexAligmentCenter;
     margin: 0.5rem 0;
 }
 
-small{
-    display: block;
-    color:white;
+small {
+    display   : block;
+    color     : white;
     text-align: center;
-    font-size: 1.2rem;
+    font-size : 1.2rem;
+    padding   : 0.5rem;
+}
+
+.categoryIcon {
+    font-size: 3rem;
+    color    : $tertiaryColor;
+    cursor   : pointer;
+
+    &:hover {
+        transform: scaleX(-1);
+    }
 }
