@@ -1,0 +1,17 @@
+@media only screen   
+and (min-width: 1030px)   
+and (max-width: 1566px){
+    .formFiled{
+        margin: 0.5rem 0;
+        padding-bottom: 0.2rem;
+    }
+    body{
+        font-size: 50%;
+    }
+    .ideaList{
+        max-height: 70vh;;
+    }
+    .formFiledInpt{
+        padding: 0.2rem;
+    }
+}
